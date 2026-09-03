@@ -13,7 +13,7 @@ A Go client library for [Confluence](https://www.atlassian.com/software/confluen
 go get github.com/umats/go-confluence
 ```
 
-Requires Go 1.26 or later.
+Requires Go 1.27 or later.
 
 ## Quick start
 
@@ -84,7 +84,7 @@ if err != nil {
 ### Client options
 
 | Option | Description |
-|--------|-------------|
+| --- | --- |
 | [`WithBasicAuth(username, password)`](client.go:57) | Sets username and password (or API token) for HTTP Basic Auth. |
 | [`WithHTTPClient(hc)`](client.go:66) | Replaces the default `http.Client`. |
 | [`WithPollInterval(d)`](client.go:77) | Sets how often to poll a Cloud export task (default: 3s). |
@@ -179,7 +179,7 @@ if err != nil {
 The root [`confluence`](client.go:1) package is the entry point for creating clients and accessing services. Domain APIs and shared types live in subpackages:
 
 | Package | Description | Docs |
-|---------|-------------|------|
+| --- | --- | --- |
 | [`export`](export/service.go:1) | PDF export workflow. | [`export/DOCS.md`](export/DOCS.md) |
 | [`page`](page/service.go:1) | REST v2 page operations. | [`page/DOCS.md`](page/DOCS.md) |
 | [`space`](space/service.go:1) | REST v2 space operations. | [`space/DOCS.md`](space/DOCS.md) |
@@ -204,7 +204,7 @@ For dependency injection and testing, use the smaller interfaces in [`services_i
 This project uses [Task](https://taskfile.dev) for common commands:
 
 | Command | Description |
-|---------|-------------|
+| --- | --- |
 | `task test` | Run unit tests. |
 | `task test:race` | Run unit tests with the race detector. |
 | `task test:cover` | Run tests and print coverage. |

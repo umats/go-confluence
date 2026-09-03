@@ -53,7 +53,7 @@ go test -fuzz=FuzzExtractTaskID ./...
 
 ## Code Conventions & Common Patterns
 
-- Go version is `1.26` (`go.mod`). Use standard Go formatting; lint is strict through `.golangci.yml` and CI uses `golangci-lint` v2.12.1.
+- Go version is `1.27` (`go.mod`). Use standard Go formatting; lint is strict through `.golangci.yml` and CI uses `golangci-lint` v2.12.1.
 - Public network methods take `context.Context` first and return typed `models`/`params` values plus `error`.
 - Client configuration uses functional options: `WithBasicAuth`, `WithHTTPClient`, `WithTimeout`, `WithPollInterval`, `WithPollTimeout`, `WithRequireHTTPS`, `WithAllowedRedirectHosts`, `WithAllowCrossHostContentURL`.
 - Services follow `NewService(client *transport.Client) *Service`; REST services hold a `*transport.V2Client`, while export uses `*transport.Client` directly.
@@ -83,7 +83,7 @@ go test -fuzz=FuzzExtractTaskID ./...
 
 ## Runtime/Tooling Preferences
 
-- Runtime/toolchain: Go `1.26` or newer as declared in `go.mod`.
+- Runtime/toolchain: Go `1.27` or newer as declared in `go.mod`.
 - Task runner: Task v3.x; use `task ...` targets rather than inventing ad hoc scripts.
 - Package management: Go modules; no vendoring by default (`GO_VENDOR` in `Taskfile.yml` is intentionally blank).
 - Docs tooling: `gomarkdoc` for package `DOCS.md` generation.
